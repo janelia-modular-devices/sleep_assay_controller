@@ -26,7 +26,7 @@ First, set all properties to defaults.
 request:
 
 ```shell
-setAllPropertiesToDefaults
+setPropertiesToDefaults [ALL]
 ```
 
 Then get epoch time on the client computer using one of any number of
@@ -82,14 +82,14 @@ If it is off by a few hours, the time zone may need to be adjusted.
 request:
 
 ```shell
-getPropertyValues
+getPropertyValues [SleepAssayController]
 ```
 
 response:
 
 ```json
 {
-  "id":"getpropertyvalues",
+  "id":"getPropertyValues",
   "result":{
     "cameraTriggerChannel":0,
     "cameraTriggerFrequency":0.500000,
@@ -473,7 +473,7 @@ from modular_client import ModularClient
 import time
 
 dev = ModularClient()
-dev.set_all_properties_to_defaults()
+dev.set_properties_to_defaults(['ALL'])
 dev.set_time(int(time.time()))
 time_zone_offset = -time.timezone/(60*60)
 t = time.time()
@@ -484,7 +484,7 @@ dev.time_zone_offset('setValue',time_zone_offset)
 dev.now()
 {'day': 31, 'hour': 13, 'minute': 51, 'month': 5, 'second': 11, 'year': 2017}
 # check to make sure this matches the local date and time
-dev.get_property_values()
+dev.get_property_values(['SleepAssayController'])
 {'buzzerChannel': 3,
  'buzzerIndicatorChannel': 7,
  'buzzerOnDurationMax': 4,
@@ -603,7 +603,7 @@ getAvailableComPorts()
 serial_port = 'COM9' % example
 dev = ModularClient(serial_port);
 dev.open();
-dev.setAllPropertiesToDefaults();
+dev.setPropertiesToDefaults({'ALL'});
 % look up time zone offset for your location
 % taking into account daylight savings time
 % if necessary
@@ -624,7 +624,7 @@ dev.now()
     minute: 41
     second: 54
 % check to make sure this matches the local date and time
-dev.getPropertyValues()
+dev.getPropertyValues({'SleepAssayController'})
           cameraTriggerChannel: 0
         cameraTriggerFrequency: 0.5000
              whiteLightChannel: 1
