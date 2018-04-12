@@ -1,69 +1,61 @@
-# sleep_assay_controller
+#+TITLE: sleep_assay_controller
+#+AUTHOR: Peter Polidoro
+#+EMAIL: peterpolidoro@gmail.com
 
-Authors:
+* Repository Information
+  - Author :: Peter Polidoro
+  - License :: BSD
 
-    Peter Polidoro <polidorop@janelia.hhmi.org>
+* Example Usage
 
-License:
+** Command Line
 
-    BSD
+   Open terminal, set baud rate to 115200 and set to append newline to
+   each request sent to the device.
 
-## More Detailed Help on Installation and Usage
+   First, set all properties to defaults.
 
-[modular-devices](https://github.com/janelia-modular-devices/modular-devices)
+   request:
 
-For API, look in firmware directories.
-
-## Example Usage
-
-### Command Line
-
-Open terminal, set baud rate to 115200 and set to append newline to
-each request sent to the device.
-
-First, set all properties to defaults.
-
-request:
-
-```shell
+   #+BEGIN_SRC sh
 setPropertiesToDefaults [ALL]
-```
+   #+END_SRC
 
-Then get epoch time on the client computer using one of any number of
-ways.
+   Then get epoch time on the client computer using one of any number of
+   ways.
 
-Web Page:
+   Web Page:
 
-<https://www.epochconverter.com/>
+   [[https://www.epochconverter.com/]]
 
-Bash:
+   Bash:
 
-```shell
+   #+BEGIN_SRC sh
 ndate +%s
-```
+   #+END_SRC
 
-Example: epoch_time = 1496156562
+   Example: epoch_time = 1496156562
 
-Set the time on the device:
+   Set the time on the device:
 
-request:
+   request:
 
-```shell
+   #+BEGIN_SRC sh
 setTime 1496156562
-```
+   #+END_SRC
 
-Check the date and time make sure this matches the local date and
-time.
+   Check the date and time make sure this matches the local date and
+   time.
 
-request:
+   request:
 
-```shell
+   #+BEGIN_SRC sh
 now
-```
+   #+END_SRC
 
-response:
+   response:
 
-```json
+   #+BEGIN_SRC js
 {
   "id":"now",
   "result":{
@@ -75,19 +67,19 @@ response:
     "second":4
   }
 }
-```
+   #+END_SRC
 
-If it is off by a few hours, the time zone may need to be adjusted.
+   If it is off by a few hours, the time zone may need to be adjusted.
 
-request:
+   request:
 
-```shell
+   #+BEGIN_SRC sh
 getPropertyValues [SleepAssayController]
-```
+   #+END_SRC
 
-response:
+   response:
 
-```json
+   #+BEGIN_SRC js
 {
   "id":"getPropertyValues",
   "result":{
@@ -116,107 +108,107 @@ response:
     "testingDayDuration":24
   }
 }
-```
+   #+END_SRC
 
-request:
+   request:
 
-```shell
+   #+BEGIN_SRC sh
 getAssayDuration
-```
+   #+END_SRC
 
-response:
+   response:
 
-```json
+   #+BEGIN_SRC js
 {
   "id":"getAssayDuration",
   "result":4
 }
-```
+   #+END_SRC
 
-request:
+   request:
 
-```shell
+   #+BEGIN_SRC sh
 entrainmentDuration setValue 1
-```
+   #+END_SRC
 
-response:
+   response:
 
-```json
+   #+BEGIN_SRC js
 {
   "id":"entrainmentDuration",
   "result":1
 }
-```
+   #+END_SRC
 
-request:
+   request:
 
-```shell
+   #+BEGIN_SRC sh
 recoveryDuration setValue 1
-```
+   #+END_SRC
 
-response:
+   response:
 
-```json
+   #+BEGIN_SRC js
 {
   "id":"recoveryDuration",
   "result":1
 }
-```
+   #+END_SRC
 
-request:
+   request:
 
-```shell
+   #+BEGIN_SRC sh
 getAssayDuration
-```
+   #+END_SRC
 
-response:
+   response:
 
-```json
+   #+BEGIN_SRC js
 {
   "id":"getAssayDuration",
   "result":2
 }
-```
+   #+END_SRC
 
-request:
+   request:
 
-```shell
+   #+BEGIN_SRC sh
 getExperimentInfo
-```
+   #+END_SRC
 
-response:
+   response:
 
-```json
+   #+BEGIN_SRC js
 {
   "id":"getExperimentInfo",
   "result":[]
 }
-```
+   #+END_SRC
 
-request:
+   request:
 
-```shell
+   #+BEGIN_SRC sh
 addExperimentDay
-```
+   #+END_SRC
 
-response:
+   response:
 
-```json
+   #+BEGIN_SRC js
 {
   "id":"addExperimentDay",
   "result":0
 }
-```
+   #+END_SRC
 
-request:
+   request:
 
-```shell
+   #+BEGIN_SRC sh
 getExperimentInfo
-```
+   #+END_SRC
 
-response:
+   response:
 
-```json
+   #+BEGIN_SRC js
 {
   "id":"getExperimentInfo",
   "result":[
@@ -231,17 +223,17 @@ response:
     }
   ]
 }
-```
+   #+END_SRC
 
-request:
+   request:
 
-```shell
+   #+BEGIN_SRC sh
 setExperimentDayRedLight 0 true 0 12
-```
+   #+END_SRC
 
-response:
+   response:
 
-```json
+   #+BEGIN_SRC js
 {
   "id":"setExperimentDayRedLight",
   "result":{
@@ -254,32 +246,32 @@ response:
     "buzzer_duration":0.000000
   }
 }
-```
+   #+END_SRC
 
-request:
+   request:
 
-```shell
+   #+BEGIN_SRC sh
 addExperimentDayCopy 0
-```
+   #+END_SRC
 
-response:
+   response:
 
-```json
+   #+BEGIN_SRC js
 {
   "id":"addExperimentDayCopy",
   "result":1
 }
-```
+   #+END_SRC
 
-request:
+   request:
 
-```shell
+   #+BEGIN_SRC sh
 setExperimentDayWhiteLight 1 false
-```
+   #+END_SRC
 
-response:
+   response:
 
-```json
+   #+BEGIN_SRC js
 {
   "id":"setExperimentDayWhiteLight",
   "result":{
@@ -292,17 +284,17 @@ response:
     "buzzer_duration":0.000000
   }
 }
-```
+   #+END_SRC
 
-request:
+   request:
 
-```shell
+   #+BEGIN_SRC sh
 setExperimentDayBuzzer 1 true 3 12
-```
+   #+END_SRC
 
-response:
+   response:
 
-```json
+   #+BEGIN_SRC js
 {
   "id":"setExperimentDayBuzzer",
   "result":{
@@ -315,17 +307,17 @@ response:
     "buzzer_duration":12.000000
   }
 }
-```
+   #+END_SRC
 
-request:
+   request:
 
-```shell
+   #+BEGIN_SRC sh
 getExperimentInfo
-```
+   #+END_SRC
 
-response:
+   response:
 
-```json
+   #+BEGIN_SRC js
 {
   "id":"getExperimentInfo",
   "result":[
@@ -349,62 +341,62 @@ response:
     }
   ]
 }
-```
+   #+END_SRC
 
-request:
+   request:
 
-```shell
+   #+BEGIN_SRC sh
 getExperimentDuration
-```
+   #+END_SRC
 
-response:
+   response:
 
-```json
+   #+BEGIN_SRC js
 {
   "id":"getExperimentDuration",
   "result":2
 }
-```
+   #+END_SRC
 
-request:
+   request:
 
-```shell
+   #+BEGIN_SRC sh
 getAssayDuration
-```
+   #+END_SRC
 
-response:
+   response:
 
-```json
+   #+BEGIN_SRC js
 {
   "id":"getAssayDuration",
   "result":4
 }
-```
+   #+END_SRC
 
-request:
+   request:
 
-```shell
+   #+BEGIN_SRC sh
 testAssay
-```
+   #+END_SRC
 
-response:
+   response:
 
-```json
+   #+BEGIN_SRC js
 {
   "id":"testAssay",
   "result":null
 }
-```
+   #+END_SRC
 
-request:
+   request:
 
-```shell
+   #+BEGIN_SRC sh
 getAssayStatus
-```
+   #+END_SRC
 
-response:
+   response:
 
-```json
+   #+BEGIN_SRC js
 {
   "id":"getAssayStatus",
   "result":{
@@ -427,32 +419,32 @@ response:
     "testing":true
   }
 }
-```
+   #+END_SRC
 
-request:
+   request:
 
-```shell
+   #+BEGIN_SRC sh
 runAssay
-```
+   #+END_SRC
 
-response:
+   response:
 
-```json
+   #+BEGIN_SRC js
 {
   "id":"runAssay",
   "result":null
 }
-```
+   #+END_SRC
 
-request:
+   request:
 
-```shell
+   #+BEGIN_SRC sh
 getAssayEnd
-```
+   #+END_SRC
 
-response:
+   response:
 
-```json
+   #+BEGIN_SRC js
 {
   "id":"getAssayEnd",
   "result":{
@@ -464,11 +456,11 @@ response:
     "second":0
   }
 }
-```
+   #+END_SRC
 
-### Python
+** Python
 
-```python
+   #+BEGIN_SRC python
 from modular_client import ModularClient
 import time
 
@@ -593,12 +585,11 @@ dev.get_assay_status()
 dev.run_assay()
 dev.get_assay_end()
 {'day': 4, 'hour': 9, 'minute': 0, 'month': 6, 'second': 0, 'year': 2017}
-```
+   #+END_SRC
 
+** Matlab
 
-### Matlab
-
-```matlab
+   #+BEGIN_SRC matlab
 getAvailableComPorts()
 serial_port = 'COM9' % example
 dev = ModularClient(serial_port);
@@ -726,4 +717,4 @@ dev.getAssayEnd()
       hour: 9
     minute: 0
     second: 0
-```
+   #+END_SRC
