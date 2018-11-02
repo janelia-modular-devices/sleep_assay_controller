@@ -7,3 +7,6 @@
 [submodule "generate_modular_device_documentation"]
 	path = generate_modular_device_documentation
 	url = https://github.com/janelia-modular-devices/generate_modular_device_documentation.git
+[submodule "hardware/sleep_assay_wiring"]
+	path = hardware/sleep_assay_wiring
+	url = https://github.com/janelia-kicad/sleep_assay_wiring.git
