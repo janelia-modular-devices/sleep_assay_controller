@@ -10,3 +10,9 @@
 [submodule "hardware/sleep_assay_wiring"]
 	path = hardware/sleep_assay_wiring
 	url = https://github.com/janelia-kicad/sleep_assay_wiring.git
+[submodule "firmware/BacklightController"]
+	path = firmware/BacklightController
+	url = https://github.com/janelia-arduino/BacklightController.git
+[submodule "firmware/DigitalController"]
+	path = firmware/DigitalController
+	url = https://github.com/janelia-arduino/DigitalController.git

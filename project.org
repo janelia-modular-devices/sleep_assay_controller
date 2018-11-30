@@ -20,10 +20,102 @@
    #+BEGIN_SRC sh
      # Open terminal, set baud rate to 115200 and set to append newline to
      # each request sent to the device.
+     ?
+     # {
+     #   "id": "?",
+     #   "result": {
+     #     "device_id": {
+     #       "name": "sleep_assay_controller",
+     #       "form_factor": "3x2",
+     #       "serial_number": 0
+     #     },
+     #     "api": {
+     #       "firmware": [
+     #         "SleepAssayController"
+     #       ],
+     #       "verbosity": "NAMES",
+     #       "functions": [
+     #         "setIrBacklightAndFanOnAtPower",
+     #         "setIrBacklightAndFanOnAtIntensity",
+     #         "setVisibleBacklightAndIndicatorOnAtPower",
+     #         "setVisibleBacklightAndIndicatorOnAtIntensity",
+     #         "setWhiteLightAndIndicatorOnAtPower",
+     #         "setBuzzerAndIndicatorOnAtPower",
+     #         "getAssayStart",
+     #         "getAssayEnd",
+     #         "getAssayDuration",
+     #         "getExperimentStart",
+     #         "getExperimentEnd",
+     #         "getExperimentDuration",
+     #         "getEntrainmentStart",
+     #         "getExperimentInfo",
+     #         "getExperimentDayInfo",
+     #         "addExperimentDay",
+     #         "addExperimentDays",
+     #         "addExperimentDayCopy",
+     #         "addExperimentDayCopies",
+     #         "removeLastExperimentDay",
+     #         "removeAllExperimentDays",
+     #         "setExperimentDayVisibleBacklight",
+     #         "setExperimentDayWhiteLight",
+     #         "setExperimentDayBuzzer",
+     #         "getAssayStatus"
+     #       ],
+     #       "parameters": [
+     #         "experiment_day",
+     #         "visible_backlight_delay",
+     #         "visible_backlight_duration",
+     #         "buzzer_delay",
+     #         "buzzer_duration",
+     #         "day_count"
+     #       ],
+     #       "properties": [
+     #         "visibleBacklightFrequency",
+     #         "visibleBacklightDutyCycle",
+     #         "whiteLightEntrainmentPower",
+     #         "whiteLightRecoveryPower",
+     #         "whiteLightStartTime",
+     #         "whiteLightOnDuration",
+     #         "buzzerOnDurationMin",
+     #         "buzzerOnDurationMax",
+     #         "buzzerWaitMin",
+     #         "buzzerWaitMax",
+     #         "cameraTriggerFrequency",
+     #         "entrainmentDuration",
+     #         "recoveryDuration",
+     #         "testingDayDuration"
+     #       ],
+     #       "callbacks": [
+     #         "setIrBacklightAndFanOn",
+     #         "setIrBacklightAndFanOff",
+     #         "toggleIrBacklightAndFan",
+     #         "setVisibleBacklightAndIndicatorOn",
+     #         "setVisibleBacklightAndIndicatorOff",
+     #         "toggleVisibleBacklightAndIndicator",
+     #         "setWhiteLightAndIndicatorOn",
+     #         "setWhiteLightAndIndicatorOff",
+     #         "toggleWhiteLightAndIndicator",
+     #         "setBuzzerAndIndicatorOn",
+     #         "setBuzzerAndIndicatorOff",
+     #         "toggleBuzzerAndIndicator",
+     #         "toggleAll",
+     #         "startCameraTrigger",
+     #         "stopCameraTrigger",
+     #         "runAssay",
+     #         "testAssay",
+     #         "stopAssay"
+     #       ]
+     #     }
+     #   }
+     # }
      #
      # First, set all properties to defaults.
      #
      setPropertiesToDefaults [ALL]
+     # {
+     #   "id": "setPropertiesToDefaults",
+     #   "result": null
+     # }
      #
      # Then get epoch time on the client computer using one of any number of
      # ways.
@@ -34,57 +126,58 @@
      #
      # Bash: ndate +%s
      #
-     # Example: epoch_time = 1496156562
+     # Example: epoch_time = 1543617175
      #
      # Set the time on the device:
      #
-     setTime 1496156562
+     setTime 1543617175
+     # {
+     #   "id": "setTime",
+     #   "result": null
+     # }
      #
      # Check the date and time make sure this matches the local date and
      # time.
      #
      now
      # {
-     #   "id":"now",
-     #   "result":{
-     #     "year":2017,
-     #     "month":5,
-     #     "day":30,
-     #     "hour":11,
-     #     "minute":3,
-     #     "second":4
+     #   "id": "now",
+     #   "result": {
+     #     "year": 2018,
+     #     "month": 11,
+     #     "day": 30,
+     #     "hour": 18,
+     #     "minute": 32,
+     #     "second": 56
      #   }
      # }
      #
      # If it is off by a few hours, the time zone may need to be adjusted.
      #
+     setIrBacklightAndFanOnAtPower 50
+     # {
+     #   "id": "setIrBacklightAndFanOnAtPower",
+     #   "result": null
+     # }
+     #
      getPropertyValues [SleepAssayController]
      # {
-     #   "id":"getPropertyValues",
-     #   "result":{
-     #     "cameraTriggerChannel":0,
-     #     "cameraTriggerFrequency":0.500000,
-     #     "whiteLightChannel":1,
-     #     "whiteLightIndicatorChannel":5,
-     #     "whiteLightPower":50,
-     #     "whiteLightStartTime":9,
-     #     "whiteLightOnDuration":12,
-     #     "redLightChannel":2,
-     #     "redLightIndicatorChannel":6,
-     #     "redLightPower":50,
-     #     "redLightFrequency":10,
-     #     "redLightDutyCycle":50,
-     #     "buzzerChannel":3,
-     #     "buzzerIndicatorChannel":7,
-     #     "buzzerPower":50,
-     #     "buzzerOnDurationMin":1,
-     #     "buzzerOnDurationMax":4,
-     #     "buzzerWaitMin":1,
-     #     "buzzerWaitMax":3,
-     #     "timeZoneOffset":-4,
-     #     "entrainmentDuration":2,
-     #     "recoveryDuration":2,
-     #     "testingDayDuration":24
+     #   "id": "getPropertyValues",
+     #   "result": {
+     #     "visibleBacklightFrequency": 10.000000,
+     #     "visibleBacklightDutyCycle": 50,
+     #     "whiteLightEntrainmentPower": 50,
+     #     "whiteLightRecoveryPower": 50,
+     #     "whiteLightStartTime": 9,
+     #     "whiteLightOnDuration": 12,
+     #     "buzzerOnDurationMin": 1,
+     #     "buzzerOnDurationMax": 4,
+     #     "buzzerWaitMin": 1,
+     #     "buzzerWaitMax": 3,
+     #     "cameraTriggerFrequency": 0.500000,
+     #     "entrainmentDuration": 2,
+     #     "recoveryDuration": 2,
+     #     "testingDayDuration": 24
      #   }
      # }
      getAssayDuration
@@ -119,30 +212,43 @@
      # }
      getExperimentInfo
      # {
-     #   "id":"getExperimentInfo",
-     #   "result":[
+     #   "id": "getExperimentInfo",
+     #   "result": [
      #     {
-     #       "white_light":true,
-     #       "red_light":false,
-     #       "red_light_delay":0.000000,
-     #       "red_light_duration":0.000000,
-     #       "buzzer":false,
-     #       "buzzer_delay":0.000000,
-     #       "buzzer_duration":0.000000
+     #       "visible_backlight_intensity": 0.000000,
+     #       "visible_backlight_delay": 0.000000,
+     #       "visible_backlight_duration": 0.000000,
+     #       "white_light_power": 0.000000,
+     #       "buzzer_power": 0.000000,
+     #       "buzzer_delay": 0.000000,
+     #       "buzzer_duration": 0.000000
      #     }
      #   ]
      # }
-     setExperimentDayRedLight 0 true 0 12
+     setExperimentDayWhiteLight 0 75
      # {
-     #   "id":"setExperimentDayRedLight",
-     #   "result":{
-     #     "white_light":true,
-     #     "red_light":true,
-     #     "red_light_delay":0.000000,
-     #     "red_light_duration":12.000000,
-     #     "buzzer":false,
-     #     "buzzer_delay":0.000000,
-     #     "buzzer_duration":0.000000
+     #   "id": "setExperimentDayWhiteLight",
+     #   "result": {
+     #     "visible_backlight_intensity": 0.000000,
+     #     "visible_backlight_delay": 0.000000,
+     #     "visible_backlight_duration": 0.000000,
+     #     "white_light_power": 75.000000,
+     #     "buzzer_power": 0.000000,
+     #     "buzzer_delay": 0.000000,
+     #     "buzzer_duration": 0.000000
+     #   }
+     # }
+     setExperimentDayVisibleBacklight 0 5.0 0 12
+     # {
+     #   "id": "setExperimentDayVisibleBacklight",
+     #   "result": {
+     #     "visible_backlight_intensity": 5.000000,
+     #     "visible_backlight_delay": 0.000000,
+     #     "visible_backlight_duration": 12.000000,
+     #     "white_light_power": 75.000000,
+     #     "buzzer_power": 0.000000,
+     #     "buzzer_delay": 0.000000,
+     #     "buzzer_duration": 0.000000
      #   }
      # }
      addExperimentDayCopy 0
@@ -150,112 +256,120 @@
      #   "id":"addExperimentDayCopy",
      #   "result":1
      # }
-     setExperimentDayWhiteLight 1 false
+     setExperimentDayBuzzer 1 50 3 12
      # {
-     #   "id":"setExperimentDayWhiteLight",
-     #   "result":{
-     #     "white_light":false,
-     #     "red_light":false,
-     #     "red_light_delay":0.000000,
-     #     "red_light_duration":0.000000,
-     #     "buzzer":false,
-     #     "buzzer_delay":0.000000,
-     #     "buzzer_duration":0.000000
-     #   }
-     # }
-     setExperimentDayBuzzer 1 true 3 12
-     # {
-     #   "id":"setExperimentDayBuzzer",
-     #   "result":{
-     #     "white_light":false,
-     #     "red_light":true,
-     #     "red_light_delay":0.000000,
-     #     "red_light_duration":12.000000,
-     #     "buzzer":true,
-     #     "buzzer_delay":3.000000,
-     #     "buzzer_duration":12.000000
+     #   "id": "setExperimentDayBuzzer",
+     #   "result": {
+     #     "visible_backlight_intensity": 5.000000,
+     #     "visible_backlight_delay": 0.000000,
+     #     "visible_backlight_duration": 12.000000,
+     #     "white_light_power": 75.000000,
+     #     "buzzer_power": 50.000000,
+     #     "buzzer_delay": 3.000000,
+     #     "buzzer_duration": 12.000000
      #   }
      # }
      getExperimentInfo
      # {
-     #   "id":"getExperimentInfo",
-     #   "result":[
+     #   "id": "getExperimentInfo",
+     #   "result": [
      #     {
-     #       "white_light":true,
-     #       "red_light":true,
-     #       "red_light_delay":0.000000,
-     #       "red_light_duration":12.000000,
-     #       "buzzer":false,
-     #       "buzzer_delay":0.000000,
-     #       "buzzer_duration":0.000000
+     #       "visible_backlight_intensity": 5.000000,
+     #       "visible_backlight_delay": 0.000000,
+     #       "visible_backlight_duration": 12.000000,
+     #       "white_light_power": 75.000000,
+     #       "buzzer_power": 0.000000,
+     #       "buzzer_delay": 0.000000,
+     #       "buzzer_duration": 0.000000
      #     },
      #     {
-     #       "white_light":false,
-     #       "red_light":true,
-     #       "red_light_delay":0.000000,
-     #       "red_light_duration":12.000000,
-     #       "buzzer":true,
-     #       "buzzer_delay":3.000000,
-     #       "buzzer_duration":12.000000
+     #       "visible_backlight_intensity": 5.000000,
+     #       "visible_backlight_delay": 0.000000,
+     #       "visible_backlight_duration": 12.000000,
+     #       "white_light_power": 75.000000,
+     #       "buzzer_power": 50.000000,
+     #       "buzzer_delay": 3.000000,
+     #       "buzzer_duration": 12.000000
      #     }
      #   ]
      # }
      getExperimentDuration
      # {
-     #   "id":"getExperimentDuration",
-     #   "result":2
+     #   "id": "getExperimentDuration",
+     #   "result": 2
      # }
      getAssayDuration
      # {
-     #   "id":"getAssayDuration",
-     #   "result":4
+     #   "id": "getAssayDuration",
+     #   "result": 4
      # }
      testAssay
      # {
-     #   "id":"testAssay",
-     #   "result":null
+     #   "id": "testAssay",
+     #   "result": null
      # }
      getAssayStatus
      # {
-     #   "id":"getAssayStatus",
-     #   "result":{
-     #     "time_now":1496156712,
-     #     "date_time_now":{
-     #       "year":2017,
-     #       "month":5,
-     #       "day":30,
-     #       "hour":11,
-     #       "minute":5,
-     #       "second":12
+     #   "id": "getAssayStatus",
+     #   "result": {
+     #     "time_now": 1543617266,
+     #     "date_time_now": {
+     #       "year": 2018,
+     #       "month": 11,
+     #       "day": 30,
+     #       "hour": 18,
+     #       "minute": 34,
+     #       "second": 26
      #     },
-     #     "assay_day":0.500000,
-     #     "phase":"ENTRAINMENT",
-     #     "phase_day":0.500000,
-     #     "white_light_on":true,
-     #     "red_light_pulsing":false,
-     #     "buzzing_possible":false,
-     #     "buzzing":false,
-     #     "testing":true
+     #     "assay_day": 0.666667,
+     #     "phase": "ENTRAINMENT",
+     #     "phase_day": 0.666667,
+     #     "white_light_on": false,
+     #     "visible_backlight_pulsing": false,
+     #     "buzzing_possible": false,
+     #     "buzzing": false,
+     #     "testing": true
      #   }
+     # }
+     stopAssay
+     # {
+     #   "id": "stopAssay",
+     #   "result": null
      # }
      runAssay
      # {
-     #   "id":"runAssay",
-     #   "result":null
+     #   "id": "runAssay",
+     #   "result": null
      # }
      getAssayEnd
      # {
-     #   "id":"getAssayEnd",
-     #   "result":{
-     #     "year":2017,
-     #     "month":6,
-     #     "day":3,
-     #     "hour":9,
-     #     "minute":0,
-     #     "second":0
+     #   "id": "getAssayEnd",
+     #   "result": {
+     #     "year": 2018,
+     #     "month": 12,
+     #     "day": 4,
+     #     "hour": 9,
+     #     "minute": 0,
+     #     "second": 0
      #   }
      # }
+     stopAssay
+     # {
+     #   "id": "stopAssay",
+     #   "result": null
+     # }
+     removeAllExperimentDays
+     # {
+     #   "id": "removeAllExperimentDays",
+     #   "result": null
+     # }
+     setIrBacklightAndFanOff
+     # {
+     #   "id": "setIrBacklightAndFanOff",
+     #   "result": null
+     # }
    #+END_SRC
+
 ** Python
 
    #+BEGIN_SRC python
@@ -269,35 +383,27 @@
      t = time.time()
      if time.localtime(t).tm_isdst and time.daylight:
          time_zone_offset = -time.altzone/(60*60)
-     dev.time_zone_offset('setValue',time_zone_offset)
-     # -4
+         dev.time_zone_offset('setValue',time_zone_offset)
+         # -5
      dev.now()
-     # {'day': 31, 'hour': 13, 'minute': 51, 'month': 5, 'second': 11, 'year': 2017}
+     # {'year': 2018, 'month': 11, 'day': 30, 'hour': 17, 'minute': 44, 'second': 59}
      # check to make sure this matches the local date and time
+     dev.set_ir_backlight_and_fan_on_at_power(50);
      dev.get_property_values(['SleepAssayController'])
-     # {'buzzerChannel': 3,
-     #  'buzzerIndicatorChannel': 7,
-     #  'buzzerOnDurationMax': 4,
+     # {'visibleBacklightFrequency': 10.0,
+     #  'visibleBacklightDutyCycle': 50,
+     #  'whiteLightEntrainmentPower': 50,
+     #  'whiteLightRecoveryPower': 50,
+     #  'whiteLightStartTime': 9,
+     #  'whiteLightOnDuration': 12,
      #  'buzzerOnDurationMin': 1,
-     #  'buzzerPower': 50,
-     #  'buzzerWaitMax': 3,
+     #  'buzzerOnDurationMax': 4,
      #  'buzzerWaitMin': 1,
-     #  'cameraTriggerChannel': 0,
+     #  'buzzerWaitMax': 3,
      #  'cameraTriggerFrequency': 0.5,
      #  'entrainmentDuration': 2,
      #  'recoveryDuration': 2,
-     #  'redLightChannel': 2,
-     #  'redLightDutyCycle': 50,
-     #  'redLightFrequency': 10,
-     #  'redLightIndicatorChannel': 6,
-     #  'redLightPower': 50,
-     #  'testingDayDuration': 24,
-     #  'timeZoneOffset': -4,
-     #  'whiteLightChannel': 1,
-     #  'whiteLightIndicatorChannel': 5,
-     #  'whiteLightOnDuration': 12,
-     #  'whiteLightPower': 50,
-     #  'whiteLightStartTime': 9}
+     #  'testingDayDuration': 24}
      dev.get_assay_duration()
      # 4
      dev.entrainment_duration('setValue',1)
@@ -311,78 +417,97 @@
      dev.add_experiment_day()
      # 0
      dev.get_experiment_info()
-     # [{'buzzer': False,
+     # [{'visible_backlight_intensity': 0.0,
+     #   'visible_backlight_delay': 0.0,
+     #   'visible_backlight_duration': 0.0,
+     #   'white_light_power': 0.0,
+     #   'buzzer_power': 0.0,
      #   'buzzer_delay': 0.0,
-     #   'buzzer_duration': 0.0,
-     #   'red_light': False,
-     #   'red_light_delay': 0.0,
-     #   'red_light_duration': 0.0,
-     #   'white_light': True}]
-     dev.set_experiment_day_red_light(0,True,0,12)
-     # {'buzzer': False,
+     #   'buzzer_duration': 0.0}]
+     experiment_day = 0
+     white_light_power = 75
+     dev.set_experiment_day_white_light(experiment_day,white_light_power)
+     # {'visible_backlight_intensity': 0.0,
+     #  'visible_backlight_delay': 0.0,
+     #  'visible_backlight_duration': 0.0,
+     #  'white_light_power': 75.0,
+     #  'buzzer_power': 0.0,
      #  'buzzer_delay': 0.0,
-     #  'buzzer_duration': 0.0,
-     #  'red_light': True,
-     #  'red_light_delay': 0.0,
-     #  'red_light_duration': 12.0,
-     #  'white_light': True}
+     #  'buzzer_duration': 0.0}
+     visible_backlight_intensity = 5.0
+     visible_backlight_delay = 0
+     visible_backlight_duration = 12
+     dev.set_experiment_day_visible_backlight(experiment_day,
+                                              visible_backlight_intensity,
+                                              visible_backlight_delay,
+                                              visible_backlight_duration)
+     # {'visible_backlight_intensity': 5.0,
+     #  'visible_backlight_delay': 0.0,
+     #  'visible_backlight_duration': 12.0,
+     #  'white_light_power': 75.0,
+     #  'buzzer_power': 0.0,
+     #  'buzzer_delay': 0.0,
+     #  'buzzer_duration': 0.0}
      dev.add_experiment_day_copy(0)
      # 1
-     dev.set_experiment_day_white_light(1,False)
-     # {'buzzer': False,
-     #  'buzzer_delay': 0.0,
-     #  'buzzer_duration': 0.0,
-     #  'red_light': True,
-     #  'red_light_delay': 0.0,
-     #  'red_light_duration': 12.0,
-     #  'white_light': False}
-     dev.set_experiment_day_buzzer(1,True,3,12)
-     # {'buzzer': True,
+     experiment_day = 1
+     buzzer_power = 50
+     buzzer_delay = 3
+     buzzer_duration = 12
+     dev.set_experiment_day_buzzer(experiment_day,
+                                   buzzer_power,
+                                   buzzer_delay,
+                                   buzzer_duration)
+     # {'visible_backlight_intensity': 5.0,
+     #  'visible_backlight_delay': 0.0,
+     #  'visible_backlight_duration': 12.0,
+     #  'white_light_power': 75.0,
+     #  'buzzer_power': 50.0,
      #  'buzzer_delay': 3.0,
-     #  'buzzer_duration': 12.0,
-     #  'red_light': True,
-     #  'red_light_delay': 0.0,
-     #  'red_light_duration': 12.0,
-     #  'white_light': False}
+     #  'buzzer_duration': 12.0}
      dev.get_experiment_info()
-     # [{'buzzer': False,
+     # [{'visible_backlight_intensity': 5.0,
+     #   'visible_backlight_delay': 0.0,
+     #   'visible_backlight_duration': 12.0,
+     #   'white_light_power': 75.0,
+     #   'buzzer_power': 0.0,
      #   'buzzer_delay': 0.0,
-     #   'buzzer_duration': 0.0,
-     #   'red_light': True,
-     #   'red_light_delay': 0.0,
-     #   'red_light_duration': 12.0,
-     #   'white_light': True},
-     #  {'buzzer': True,
+     #   'buzzer_duration': 0.0},
+     #  {'visible_backlight_intensity': 5.0,
+     #   'visible_backlight_delay': 0.0,
+     #   'visible_backlight_duration': 12.0,
+     #   'white_light_power': 75.0,
+     #   'buzzer_power': 50.0,
      #   'buzzer_delay': 3.0,
-     #   'buzzer_duration': 12.0,
-     #   'red_light': True,
-     #   'red_light_delay': 0.0,
-     #   'red_light_duration': 12.0,
-     #   'white_light': False}]
+     #   'buzzer_duration': 12.0}]
      dev.get_experiment_duration()
      # 2
      dev.get_assay_duration()
      # 4
      dev.test_assay()
      dev.get_assay_status()
-     # {'assay_day': 0.458333,
-     #  'buzzing': False,
-     #  'buzzing_possible': False,
-     #  'date_time_now': {'day': 31,
-     #                    'hour': 13,
-     #                    'minute': 53,
-     #                    'month': 5,
-     #                    'second': 48,
-     #                    'year': 2017},
+     # {'time_now': 1543618497,
+     #  'date_time_now': {'year': 2018,
+     #   'month': 11,
+     #   'day': 30,
+     #   'hour': 17,
+     #   'minute': 54,
+     #   'second': 57},
+     #  'assay_day': 0.666667,
      #  'phase': 'ENTRAINMENT',
-     #  'phase_day': 0.458333,
-     #  'red_light_pulsing': False,
-     #  'testing': True,
-     #  'time_now': 1496253228,
-     #  'white_light_on': True}
+     #  'phase_day': 0.666667,
+     #  'white_light_on': False,
+     #  'visible_backlight_pulsing': False,
+     #  'buzzing_possible': False,
+     #  'buzzing': False,
+     #  'testing': True}
+     dev.stop_assay()
      dev.run_assay()
      dev.get_assay_end()
-     # {'day': 4, 'hour': 9, 'minute': 0, 'month': 6, 'second': 0, 'year': 2017}
+     # {'year': 2018, 'month': 12, 'day': 4, 'hour': 9, 'minute': 0, 'second': 0}
+     dev.stop_assay()
+     dev.remove_all_experiment_days()
+     dev.set_ir_backlight_and_fan_off()
    #+END_SRC
 
 ** Matlab
@@ -406,34 +531,26 @@
      t = clock;
      dev.adjustTime((t(4) - n.hour)*60*60);
      dev.now()
-     %   year: 2017
-     %  month: 5
-     %    day: 31
-     %   hour: 14
-     % minute: 41
-     % second: 54
+     %   year: 2018
+     %  month: 11
+     %    day: 30
+     %   hour: 17
+     % minute: 44
+     % second: 59
      % check to make sure this matches the local date and time
+     dev.setIrBacklightAndFanOnAtPower(50);
      dev.getPropertyValues({'SleepAssayController'})
-     %       cameraTriggerChannel: 0
-     %     cameraTriggerFrequency: 0.5000
-     %          whiteLightChannel: 1
-     % whiteLightIndicatorChannel: 5
-     %            whiteLightPower: 50
+     %  visibleBacklightFrequency: 10.0
+     %  visibleBacklightDutyCycle: 50
+     % whiteLightEntrainmentPower: 50
+     %    whiteLightRecoveryPower: 50
      %        whiteLightStartTime: 9
      %       whiteLightOnDuration: 12
-     %            redLightChannel: 2
-     %   redLightIndicatorChannel: 6
-     %              redLightPower: 50
-     %          redLightFrequency: 10
-     %          redLightDutyCycle: 50
-     %              buzzerChannel: 3
-     %     buzzerIndicatorChannel: 7
-     %                buzzerPower: 50
      %        buzzerOnDurationMin: 1
      %        buzzerOnDurationMax: 4
      %              buzzerWaitMin: 1
      %              buzzerWaitMax: 3
-     %             timeZoneOffset: -4
+     %     cameraTriggerFrequency: 0.5
      %        entrainmentDuration: 2
      %           recoveryDuration: 2
      %         testingDayDuration: 24
@@ -449,70 +566,69 @@
      % 0
      info = dev.getExperimentInfo();
      info{1}
-     %        white_light: 1
-     %          red_light: 0
-     %    red_light_delay: 0
-     % red_light_duration: 0
-     %             buzzer: 0
-     %       buzzer_delay: 0
-     %    buzzer_duration: 0
-     dev.setExperimentDayRedLight(0,1,0,12)
-     %        white_light: 1
-     %          red_light: 1
-     %    red_light_delay: 0
-     % red_light_duration: 12.0000
-     %             buzzer: 0
-     %       buzzer_delay: 0
-     %    buzzer_duration: 0
+     % visible_backlight_intensity: 0.0
+     %     visible_backlight_delay: 0.0
+     %  visible_backlight_duration: 0.0
+     %           white_light_power: 0.0
+     %                buzzer_power: 0.0
+     %                buzzer_delay: 0.0
+     %             buzzer_duration: 0.0
+     experiment_day = 0;
+     white_light_power = 75;
+     dev.setExperimentDayWhiteLight(experiment_day,white_light_power);
+     visible_backlight_intensity = 5.0;
+     visible_backlight_delay = 0;
+     visible_backlight_duration = 12;
+     dev.setExperimentDayVisibleBacklight(experiment_day, ...
+                                          visible_backlight_intensity, ...
+                                          visible_backlight_delay, ...
+                                          visible_backlight_duration);
      dev.addExperimentDayCopy(0)
      % 1
-     dev.setExperimentDayWhiteLight(1,0)
-     %        white_light: 0
-     %          red_light: 1
-     %    red_light_delay: 0
-     % red_light_duration: 12.0000
-     %             buzzer: 0
-     %       buzzer_delay: 0
-     %    buzzer_duration: 0
-     dev.setExperimentDayBuzzer(1,1,3,12)
-     %        white_light: 0
-     %          red_light: 1
-     %    red_light_delay: 0
-     % red_light_duration: 12.0000
-     %             buzzer: 1
-     %       buzzer_delay: 3
-     %    buzzer_duration: 12.0000
+     experiment_day = 1;
+     buzzer_power = 50;
+     buzzer_delay = 3;
+     buzzer_duration = 12;
+     dev.setExperimentDayBuzzer(experiment_day, ...
+                                buzzer_power, ...
+                                buzzer_delay, ...
+                                buzzer_duration);
      info = dev.getExperimentInfo();
      info{2}
-     %        white_light: 0
-     %          red_light: 1
-     %    red_light_delay: 0
-     % red_light_duration: 12.0000
-     %             buzzer: 1
-     %       buzzer_delay: 3
-     %    buzzer_duration: 12.0000
+     % visible_backlight_intensity: 5.0
+     %     visible_backlight_delay: 0.0
+     %  visible_backlight_duration: 12.0
+     %           white_light_power: 75.0
+     %                buzzer_power: 50.0
+     %                buzzer_delay: 3.0
+     %             buzzer_duration: 12.0
      dev.getExperimentDuration()
      % 2
      dev.getAssayDuration()
      % 4
      dev.testAssay();
      dev.getAssayStatus()
-     %          time_now: 1.4963e+09
-     %     date_time_now: [1x1 struct]
-     %         assay_day: 0.7500
-     %             phase: 'ENTRAINMENT'
-     %         phase_day: 0.7500
-     %    white_light_on: 0
-     % red_light_pulsing: 0
-     %  buzzing_possible: 0
-     %           buzzing: 0
-     %           testing: 1
+     %                  time_now: 1543618497
+     %             date_time_now: [1x1 struct]
+     %                 assay_day: 0.666667
+     %                     phase: 'ENTRAINMENT'
+     %                 phase_day: 0.666667
+     %            white_light_on: 0
+     % visible_backlight_pulsing: 0
+     %          buzzing_possible: 0
+     %                   buzzing: 0
+     %                   testing: 1
      dev.runAssay();
      dev.getAssayEnd()
-     %   year: 2017
-     %  month: 6
+     %   year: 2018
+     %  month: 12
      %    day: 4
      %   hour: 9
      % minute: 0
      % second: 0
+     dev.stopAssay()
+     dev.removeAllExperimentDays()
+     dev.setIrBacklightAndFanOff()
    #+END_SRC
+
+* Build Instructions
