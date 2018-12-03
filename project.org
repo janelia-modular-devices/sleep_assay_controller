@@ -327,7 +327,7 @@
      #     "phase_day": 0.666667,
      #     "visible_backlight_intensity": 0.000000,
      #     "white_light_power": 50.000000,
-     #     "buzzing_possible": false,
+     #     "buzzer_power": 0.000000,
      #     "buzzing": false,
      #     "testing": true
      #   }
@@ -500,7 +500,7 @@
      #  'phase_day': 0.666667,
      #  'visible_backlight_intensity': 0.000000,
      #  'white_light_power': 50.000000,
-     #  'buzzing_possible': False,
+     #  'buzzer_power': 0.000000,
      #  'buzzing': False,
      #  'testing': True}
      dev.stop_assay()
@@ -611,16 +611,16 @@
      % 4
      dev.testAssay();
      dev.getAssayStatus()
-     %                  time_now: 1543618497
-     %             date_time_now: [1x1 struct]
-     %                 assay_day: 0.666667
-     %                     phase: 'ENTRAINMENT'
-     %                 phase_day: 0.666667
+     %                    time_now: 1543618497
+     %               date_time_now: [1x1 struct]
+     %                   assay_day: 0.666667
+     %                       phase: 'ENTRAINMENT'
+     %                   phase_day: 0.666667
      % visible_backlight_intensity: 0
-     %         white_light_power: 50
-     %          buzzing_possible: 0
-     %                   buzzing: 0
-     %                   testing: 1
+     %           white_light_power: 50
+     %                buzzer_power: 0
+     %                     buzzing: 0
+     %                     testing: 1
      dev.runAssay();
      dev.getAssayEnd()
      %   year: 2018
