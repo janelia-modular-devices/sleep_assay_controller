@@ -154,12 +154,13 @@
      #
      # If it is off by a few hours, the time zone may need to be adjusted.
      #
-     setIrBacklightAndFanOnAtPower 50
+     irBacklightIntensityMax setValue [12]
      # {
-     #   "id": "setIrBacklightAndFanOnAtPower",
-     #   "result": null
+     #   "id": "irBacklightIntensityMax",
+     #   "result": [
+     #     12.000000
+     #   ]
      # }
-     #
      getPropertyValues [SleepAssayController]
      # {
      #   "id": "getPropertyValues",
@@ -225,19 +226,6 @@
      #     }
      #   ]
      # }
-     setExperimentDayWhiteLight 0 75
-     # {
-     #   "id": "setExperimentDayWhiteLight",
-     #   "result": {
-     #     "visible_backlight_intensity": 0.000000,
-     #     "visible_backlight_delay": 0.000000,
-     #     "visible_backlight_duration": 0.000000,
-     #     "white_light_power": 75.000000,
-     #     "buzzer_power": 0.000000,
-     #     "buzzer_delay": 0.000000,
-     #     "buzzer_duration": 0.000000
-     #   }
-     # }
      setExperimentDayVisibleBacklight 0 5.0 0 12
      # {
      #   "id": "setExperimentDayVisibleBacklight",
@@ -245,6 +233,19 @@
      #     "visible_backlight_intensity": 5.000000,
      #     "visible_backlight_delay": 0.000000,
      #     "visible_backlight_duration": 12.000000,
+     #     "white_light_power": 75.000000,
+     #     "buzzer_power": 0.000000,
+     #     "buzzer_delay": 0.000000,
+     #     "buzzer_duration": 0.000000
+     #   }
+     # }
+     setExperimentDayWhiteLight 0 75
+     # {
+     #   "id": "setExperimentDayWhiteLight",
+     #   "result": {
+     #     "visible_backlight_intensity": 0.000000,
+     #     "visible_backlight_delay": 0.000000,
+     #     "visible_backlight_duration": 0.000000,
      #     "white_light_power": 75.000000,
      #     "buzzer_power": 0.000000,
      #     "buzzer_delay": 0.000000,
@@ -324,8 +325,8 @@
      #     "assay_day": 0.666667,
      #     "phase": "ENTRAINMENT",
      #     "phase_day": 0.666667,
-     #     "white_light_on": false,
-     #     "visible_backlight_pulsing": false,
+     #     "visible_backlight_intensity": 0.000000,
+     #     "white_light_power": 50.000000,
      #     "buzzing_possible": false,
      #     "buzzing": false,
      #     "testing": true
@@ -388,7 +389,8 @@
      dev.now()
      # {'year': 2018, 'month': 11, 'day': 30, 'hour': 17, 'minute': 44, 'second': 59}
      # check to make sure this matches the local date and time
-     dev.set_ir_backlight_and_fan_on_at_power(50);
+     dev.ir_backlight_intensity_max('setValue',12);
+     # 12
      dev.get_property_values(['SleepAssayController'])
      # {'visibleBacklightFrequency': 10.0,
      #  'visibleBacklightDutyCycle': 50,
@@ -425,15 +427,6 @@
      #   'buzzer_delay': 0.0,
      #   'buzzer_duration': 0.0}]
      experiment_day = 0
-     white_light_power = 75
-     dev.set_experiment_day_white_light(experiment_day,white_light_power)
-     # {'visible_backlight_intensity': 0.0,
-     #  'visible_backlight_delay': 0.0,
-     #  'visible_backlight_duration': 0.0,
-     #  'white_light_power': 75.0,
-     #  'buzzer_power': 0.0,
-     #  'buzzer_delay': 0.0,
-     #  'buzzer_duration': 0.0}
      visible_backlight_intensity = 5.0
      visible_backlight_delay = 0
      visible_backlight_duration = 12
@@ -444,6 +437,15 @@
      # {'visible_backlight_intensity': 5.0,
      #  'visible_backlight_delay': 0.0,
      #  'visible_backlight_duration': 12.0,
+     #  'white_light_power': 75.0,
+     #  'buzzer_power': 0.0,
+     #  'buzzer_delay': 0.0,
+     #  'buzzer_duration': 0.0}
+     white_light_power = 75
+     dev.set_experiment_day_white_light(experiment_day,white_light_power)
+     # {'visible_backlight_intensity': 0.0,
+     #  'visible_backlight_delay': 0.0,
+     #  'visible_backlight_duration': 0.0,
      #  'white_light_power': 75.0,
      #  'buzzer_power': 0.0,
      #  'buzzer_delay': 0.0,
@@ -496,8 +498,8 @@
      #  'assay_day': 0.666667,
      #  'phase': 'ENTRAINMENT',
      #  'phase_day': 0.666667,
-     #  'white_light_on': False,
-     #  'visible_backlight_pulsing': False,
+     #  'visible_backlight_intensity': 0.000000,
+     #  'white_light_power': 50.000000,
      #  'buzzing_possible': False,
      #  'buzzing': False,
      #  'testing': True}
@@ -538,7 +540,8 @@
      % minute: 44
      % second: 59
      % check to make sure this matches the local date and time
-     dev.setIrBacklightAndFanOnAtPower(50);
+     dev.irBacklightIntensityMax('setValue',12)
+     % 12
      dev.getPropertyValues({'SleepAssayController'})
      %  visibleBacklightFrequency: 10.0
      %  visibleBacklightDutyCycle: 50
@@ -574,8 +577,6 @@
      %                buzzer_delay: 0.0
      %             buzzer_duration: 0.0
      experiment_day = 0;
-     white_light_power = 75;
-     dev.setExperimentDayWhiteLight(experiment_day,white_light_power);
      visible_backlight_intensity = 5.0;
      visible_backlight_delay = 0;
      visible_backlight_duration = 12;
@@ -583,6 +584,8 @@
                                           visible_backlight_intensity, ...
                                           visible_backlight_delay, ...
                                           visible_backlight_duration);
+     white_light_power = 75;
+     dev.setExperimentDayWhiteLight(experiment_day,white_light_power);
      dev.addExperimentDayCopy(0)
      % 1
      experiment_day = 1;
@@ -613,8 +616,8 @@
      %                 assay_day: 0.666667
      %                     phase: 'ENTRAINMENT'
      %                 phase_day: 0.666667
-     %            white_light_on: 0
-     % visible_backlight_pulsing: 0
+     % visible_backlight_intensity: 0
+     %         white_light_power: 50
      %          buzzing_possible: 0
      %                   buzzing: 0
      %                   testing: 1
