@@ -1,4 +1,4 @@
-# Created 2018-12-03 Mon 15:38
+# Created 2018-12-03 Mon 15:43
 #+OPTIONS: title:nil author:nil email:nil toc:t |:t ^:nil
 #+OPTIONS: title:nil author:nil email:nil toc:t |:t ^:nil
 #+OPTIONS: title:nil author:nil email:nil toc:t |:t ^:nil
@@ -429,9 +429,9 @@ lights.
   % second: 59
   % check to make sure this matches the local date and time
   % Set IR backlight calibration
-  dev.irBacklightPowerToIntensityRatio('setValue',[5.35]);
+  dev.irBacklightPowerToIntensityRatio('setValue',{5.35});
   % Set visible backlight calibration
-  dev.visibleBacklightPowerToIntensityRatio('setValue',[14.62]);
+  dev.visibleBacklightPowerToIntensityRatio('setValue',{14.62});
   dev.irBacklightIntensityMax('setValue',{12});
   dev.getPropertyValues({'SleepAssayController'})
   %  visibleBacklightFrequency: 10.0
