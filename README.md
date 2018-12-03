@@ -1,59 +1,58 @@
-- [Repository Information](#org886bb6a)
-  - [Description](#org30c6fbd)
-- [Images](#org2dbc793)
-- [Usage Instructions](#orgcabb0db)
-  - [Arduino Serial Monitor](#org7bc0b25)
-  - [Python](#org02e9623)
-  - [Matlab](#orgdf850e3)
-- [Build Instructions](#orgdfb3080)
-- [Software](#orgc9742b9)
-- [Firmware](#orgd99c6ec)
-  - [BacklightController](#orgd7c3fe5)
-    - [Library Information](#org6a7eb5e)
-    - [API NAMES](#orgaf34bff)
-    - [API GENERAL](#org665d9b4)
-    - [Ancestors](#orgc6151b5)
-    - [Clients](#org1a261ea)
-    - [Devices](#org80cbebd)
-    - [More Detailed Modular Device Information](#org5692dd0)
-    - [Installation Instructions](#org913fa5d)
-  - [DigitalController](#org62d9d64)
-    - [Library Information](#org37d32f6)
-    - [API NAMES](#orgc62fd8e)
-    - [API GENERAL](#org7314b4f)
-    - [Ancestors](#org4b9eb1f)
-    - [Clients](#org6bcc961)
-    - [Devices](#org7d3e0ce)
-    - [More Detailed Modular Device Information](#orgb81ac3e)
-    - [Installation Instructions](#org7f9e787)
-  - [SleepAssayController](#org4159958)
-    - [Library Information](#org82a005d)
-    - [API NAMES](#orgded87b0)
-    - [API GENERAL](#org0e111c4)
-    - [Ancestors](#org0b1cb98)
-    - [Clients](#org9789570)
-    - [Devices](#org1b96a96)
-    - [More Detailed Modular Device Information](#org0e5d6f4)
-    - [Installation Instructions](#org38d34b3)
-- [Hardware](#orgc75dbcc)
-  - [backlight\_controller\_3x2](#org5e67c8e)
-    - [Repository Information](#org00e12f0)
-    - [Images](#orgae57cdb)
-    - [Schematic](#org7bc1d0f)
-    - [Gerbers](#orgcfdda6f)
-    - [Bill of Materials](#org73d7591)
-    - [Supplemental Documentation](#orge3e23ab)
-  - [sleep\_assay\_wiring](#org7a9f970)
-    - [Repository Information](#org44b3fa7)
-    - [Images](#orgf6684e0)
-    - [Schematic](#orga856cb6)
-    - [Gerbers](#orga3b52b3)
-    - [Bill of Materials](#orge26c5e5)
-    - [Supplemental Documentation](#orga9f69ff)
+- [Repository Information](#org7dc96f5)
+  - [Description](#org81a545b)
+- [Images](#org14c1c50)
+- [Usage Instructions](#orgd04dcc1)
+  - [Arduino Serial Monitor](#org4ad8478)
+  - [Matlab](#org8ab4666)
+- [Build Instructions](#org12c28d3)
+- [Software](#orge2130ed)
+- [Firmware](#org06653bb)
+  - [BacklightController](#org0c432c9)
+    - [Library Information](#orgca106d6)
+    - [API NAMES](#org79a43f4)
+    - [API GENERAL](#orga2134bb)
+    - [Ancestors](#orgcccadc5)
+    - [Clients](#org96ae192)
+    - [Devices](#orgf69b6ee)
+    - [More Detailed Modular Device Information](#org75dd16f)
+    - [Installation Instructions](#orgbcb79a1)
+  - [DigitalController](#orgc47c95c)
+    - [Library Information](#org9d9b4e1)
+    - [API NAMES](#org6c81c2b)
+    - [API GENERAL](#orgc50be3c)
+    - [Ancestors](#orgefccf40)
+    - [Clients](#orgc412483)
+    - [Devices](#org9f68f68)
+    - [More Detailed Modular Device Information](#org68678ec)
+    - [Installation Instructions](#org6b47527)
+  - [SleepAssayController](#org8c8524a)
+    - [Library Information](#org0341e55)
+    - [API NAMES](#orgf1a9172)
+    - [API GENERAL](#org3eb9479)
+    - [Ancestors](#org0d6387d)
+    - [Clients](#org0ce0204)
+    - [Devices](#orgfea62ff)
+    - [More Detailed Modular Device Information](#orge9d04e3)
+    - [Installation Instructions](#org60a50ab)
+- [Hardware](#org1d7454d)
+  - [backlight\_controller\_3x2](#orgdbb5a18)
+    - [Repository Information](#org7624043)
+    - [Images](#orgec5ac0f)
+    - [Schematic](#org207bfc7)
+    - [Gerbers](#orgbbe56a5)
+    - [Bill of Materials](#org3b2c21e)
+    - [Supplemental Documentation](#org18e6162)
+  - [sleep\_assay\_wiring](#org7a08315)
+    - [Repository Information](#org98cb52d)
+    - [Images](#org731f564)
+    - [Schematic](#org2fd575c)
+    - [Gerbers](#org36ebc7c)
+    - [Bill of Materials](#org19349f5)
+    - [Supplemental Documentation](#orgf41aa80)
 
 
 
-<a id="org886bb6a"></a>
+<a id="org7dc96f5"></a>
 
 # Repository Information
 
@@ -65,24 +64,24 @@
 -   **Email:** peterpolidoro@gmail.com
 
 
-<a id="org30c6fbd"></a>
+<a id="org81a545b"></a>
 
 ## Description
 
 This device controls the IR and visible backlights in the sleep assay rig along with the backlight cooling fans, white lights, buzzers and indicator lights.
 
 
-<a id="org2dbc793"></a>
+<a id="org14c1c50"></a>
 
 # Images
 
 
-<a id="orgcabb0db"></a>
+<a id="orgd04dcc1"></a>
 
 # Usage Instructions
 
 
-<a id="org7bc0b25"></a>
+<a id="org4ad8478"></a>
 
 ## Arduino Serial Monitor
 
@@ -222,7 +221,29 @@ now
 # }
 #
 # If it is off by a few hours, the time zone may need to be adjusted.
+# For example, for daylight savings.
 #
+timeZoneOffset setValue -5
+# {
+#   "id": "timeZoneOffset",
+#   "result": -5
+# }
+# Set IR backlight calibration
+irBacklightPowerToIntensityRatio setValue [5.35]
+# {
+#   "id": "irBacklightPowerToIntensityRatio",
+#   "result": [
+#     5.350000
+#   ]
+# }
+# Set visible backlight calibration
+visibleBacklightPowerToIntensityRatio setValue [14.62]
+# {
+#   "id": "visibleBacklightPowerToIntensityRatio",
+#   "result": [
+#     14.620000
+#   ]
+# }
 irBacklightIntensityMax setValue [12]
 # {
 #   "id": "irBacklightIntensityMax",
@@ -441,151 +462,7 @@ setIrBacklightAndFanOff
 ```
 
 
-<a id="org02e9623"></a>
-
-## Python
-
-```python
-from modular_client import ModularClient
-import time
-
-dev = ModularClient()
-dev.set_properties_to_defaults(['ALL'])
-dev.set_time(int(time.time()))
-time_zone_offset = -time.timezone/(60*60)
-t = time.time()
-if time.localtime(t).tm_isdst and time.daylight:
-    time_zone_offset = -time.altzone/(60*60)
-    dev.time_zone_offset('setValue',time_zone_offset)
-    # -5
-dev.now()
-# {'year': 2018, 'month': 11, 'day': 30, 'hour': 17, 'minute': 44, 'second': 59}
-# check to make sure this matches the local date and time
-dev.ir_backlight_intensity_max('setValue',12);
-# 12
-dev.get_property_values(['SleepAssayController'])
-# {'visibleBacklightFrequency': 10.0,
-#  'visibleBacklightDutyCycle': 50,
-#  'whiteLightEntrainmentPower': 50,
-#  'whiteLightRecoveryPower': 50,
-#  'whiteLightStartTime': 9,
-#  'whiteLightOnDuration': 12,
-#  'buzzerOnDurationMin': 1,
-#  'buzzerOnDurationMax': 4,
-#  'buzzerWaitMin': 1,
-#  'buzzerWaitMax': 3,
-#  'cameraTriggerFrequency': 0.5,
-#  'entrainmentDuration': 2,
-#  'recoveryDuration': 2,
-#  'testingDayDuration': 24}
-dev.get_assay_duration()
-# 4
-dev.entrainment_duration('setValue',1)
-# 1
-dev.recovery_duration('setValue',1)
-# 1
-dev.get_assay_duration()
-# 2
-dev.get_experiment_info()
-# []
-dev.add_experiment_day()
-# 0
-dev.get_experiment_info()
-# [{'visible_backlight_intensity': 0.0,
-#   'visible_backlight_delay': 0.0,
-#   'visible_backlight_duration': 0.0,
-#   'white_light_power': 0.0,
-#   'buzzer_power': 0.0,
-#   'buzzer_delay': 0.0,
-#   'buzzer_duration': 0.0}]
-experiment_day = 0
-visible_backlight_intensity = 5.0
-visible_backlight_delay = 0
-visible_backlight_duration = 12
-dev.set_experiment_day_visible_backlight(experiment_day,
-                                         visible_backlight_intensity,
-                                         visible_backlight_delay,
-                                         visible_backlight_duration)
-# {'visible_backlight_intensity': 5.0,
-#  'visible_backlight_delay': 0.0,
-#  'visible_backlight_duration': 12.0,
-#  'white_light_power': 75.0,
-#  'buzzer_power': 0.0,
-#  'buzzer_delay': 0.0,
-#  'buzzer_duration': 0.0}
-white_light_power = 75
-dev.set_experiment_day_white_light(experiment_day,white_light_power)
-# {'visible_backlight_intensity': 0.0,
-#  'visible_backlight_delay': 0.0,
-#  'visible_backlight_duration': 0.0,
-#  'white_light_power': 75.0,
-#  'buzzer_power': 0.0,
-#  'buzzer_delay': 0.0,
-#  'buzzer_duration': 0.0}
-dev.add_experiment_day_copy(0)
-# 1
-experiment_day = 1
-buzzer_power = 50
-buzzer_delay = 3
-buzzer_duration = 12
-dev.set_experiment_day_buzzer(experiment_day,
-                              buzzer_power,
-                              buzzer_delay,
-                              buzzer_duration)
-# {'visible_backlight_intensity': 5.0,
-#  'visible_backlight_delay': 0.0,
-#  'visible_backlight_duration': 12.0,
-#  'white_light_power': 75.0,
-#  'buzzer_power': 50.0,
-#  'buzzer_delay': 3.0,
-#  'buzzer_duration': 12.0}
-dev.get_experiment_info()
-# [{'visible_backlight_intensity': 5.0,
-#   'visible_backlight_delay': 0.0,
-#   'visible_backlight_duration': 12.0,
-#   'white_light_power': 75.0,
-#   'buzzer_power': 0.0,
-#   'buzzer_delay': 0.0,
-#   'buzzer_duration': 0.0},
-#  {'visible_backlight_intensity': 5.0,
-#   'visible_backlight_delay': 0.0,
-#   'visible_backlight_duration': 12.0,
-#   'white_light_power': 75.0,
-#   'buzzer_power': 50.0,
-#   'buzzer_delay': 3.0,
-#   'buzzer_duration': 12.0}]
-dev.get_experiment_duration()
-# 2
-dev.get_assay_duration()
-# 4
-dev.test_assay()
-dev.get_assay_status()
-# {'time_now': 1543618497,
-#  'date_time_now': {'year': 2018,
-#   'month': 11,
-#   'day': 30,
-#   'hour': 17,
-#   'minute': 54,
-#   'second': 57},
-#  'assay_day': 0.666667,
-#  'phase': 'ENTRAINMENT',
-#  'phase_day': 0.666667,
-#  'visible_backlight_intensity': 0.000000,
-#  'white_light_power': 50.000000,
-#  'buzzer_power': 0.000000,
-#  'buzzing': False,
-#  'testing': True}
-dev.stop_assay()
-dev.run_assay()
-dev.get_assay_end()
-# {'year': 2018, 'month': 12, 'day': 4, 'hour': 9, 'minute': 0, 'second': 0}
-dev.stop_assay()
-dev.remove_all_experiment_days()
-dev.set_ir_backlight_and_fan_off()
-```
-
-
-<a id="orgdf850e3"></a>
+<a id="org8ab4666"></a>
 
 ## Matlab
 
@@ -615,8 +492,11 @@ dev.now()
 % minute: 44
 % second: 59
 % check to make sure this matches the local date and time
-dev.irBacklightIntensityMax('setValue',12)
-% 12
+% Set IR backlight calibration
+dev.irBacklightPowerToIntensityRatio('setValue',[5.35]);
+% Set visible backlight calibration
+dev.visibleBacklightPowerToIntensityRatio('setValue',[14.62]);
+dev.irBacklightIntensityMax('setValue',{12});
 dev.getPropertyValues({'SleepAssayController'})
 %  visibleBacklightFrequency: 10.0
 %  visibleBacklightDutyCycle: 50
@@ -710,27 +590,27 @@ dev.setIrBacklightAndFanOff()
 ```
 
 
-<a id="orgdfb3080"></a>
+<a id="org12c28d3"></a>
 
 # Build Instructions
 
 
-<a id="orgc9742b9"></a>
+<a id="orge2130ed"></a>
 
 # Software
 
 
-<a id="orgd99c6ec"></a>
+<a id="org06653bb"></a>
 
 # Firmware
 
 
-<a id="orgd7c3fe5"></a>
+<a id="org0c432c9"></a>
 
 ## BacklightController
 
 
-<a id="org6a7eb5e"></a>
+<a id="orgca106d6"></a>
 
 ### Library Information
 
@@ -746,7 +626,7 @@ dev.setIrBacklightAndFanOff()
     Modular device backlight controller library.
 
 
-<a id="orgaf34bff"></a>
+<a id="org79a43f4"></a>
 
 ### API NAMES
 
@@ -844,14 +724,14 @@ dev.setIrBacklightAndFanOff()
 ```
 
 
-<a id="org665d9b4"></a>
+<a id="orga2134bb"></a>
 
 ### API GENERAL
 
 <./firmware/BacklightController/api/>
 
 
-<a id="orgc6151b5"></a>
+<a id="orgcccadc5"></a>
 
 ### Ancestors
 
@@ -862,12 +742,12 @@ dev.setIrBacklightAndFanOff()
 <https://github.com/janelia-arduino/DigitalController>
 
 
-<a id="org1a261ea"></a>
+<a id="org96ae192"></a>
 
 ### Clients
 
 
-<a id="org80cbebd"></a>
+<a id="orgf69b6ee"></a>
 
 ### Devices
 
@@ -876,26 +756,26 @@ dev.setIrBacklightAndFanOff()
 <https://github.com/janelia-modular-devices/backlight_controller>
 
 
-<a id="org5692dd0"></a>
+<a id="org75dd16f"></a>
 
 ### More Detailed Modular Device Information
 
 <https://github.com/janelia-modular-devices/modular-devices>
 
 
-<a id="org913fa5d"></a>
+<a id="orgbcb79a1"></a>
 
 ### Installation Instructions
 
 <https://github.com/janelia-arduino/arduino-libraries>
 
 
-<a id="org62d9d64"></a>
+<a id="orgc47c95c"></a>
 
 ## DigitalController
 
 
-<a id="org37d32f6"></a>
+<a id="org9d9b4e1"></a>
 
 ### Library Information
 
@@ -911,7 +791,7 @@ dev.setIrBacklightAndFanOff()
     Modular device digital output controller library.
 
 
-<a id="orgc62fd8e"></a>
+<a id="org6c81c2b"></a>
 
 ### API NAMES
 
@@ -987,14 +867,14 @@ dev.setIrBacklightAndFanOff()
 ```
 
 
-<a id="org7314b4f"></a>
+<a id="orgc50be3c"></a>
 
 ### API GENERAL
 
 <./firmware/DigitalController/api/>
 
 
-<a id="org4b9eb1f"></a>
+<a id="orgefccf40"></a>
 
 ### Ancestors
 
@@ -1003,38 +883,38 @@ dev.setIrBacklightAndFanOff()
 <https://github.com/janelia-arduino/ModularDeviceBase>
 
 
-<a id="org6bcc961"></a>
+<a id="orgc412483"></a>
 
 ### Clients
 
 
-<a id="org7d3e0ce"></a>
+<a id="org9f68f68"></a>
 
 ### Devices
 
 <https://github.com/janelia-modular-devices/modular_device_base>
 
 
-<a id="orgb81ac3e"></a>
+<a id="org68678ec"></a>
 
 ### More Detailed Modular Device Information
 
 <https://github.com/janelia-modular-devices/modular-devices>
 
 
-<a id="org7f9e787"></a>
+<a id="org6b47527"></a>
 
 ### Installation Instructions
 
 <https://github.com/janelia-arduino/arduino-libraries>
 
 
-<a id="org4159958"></a>
+<a id="org8c8524a"></a>
 
 ## SleepAssayController
 
 
-<a id="org82a005d"></a>
+<a id="org0341e55"></a>
 
 ### Library Information
 
@@ -1050,7 +930,7 @@ dev.setIrBacklightAndFanOff()
     Modular device sleep assay controller library.
 
 
-<a id="orgded87b0"></a>
+<a id="orgf1a9172"></a>
 
 ### API NAMES
 
@@ -1138,14 +1018,14 @@ dev.setIrBacklightAndFanOff()
 ```
 
 
-<a id="org0e111c4"></a>
+<a id="org3eb9479"></a>
 
 ### API GENERAL
 
 <./firmware/SleepAssayController/api/>
 
 
-<a id="org0b1cb98"></a>
+<a id="org0d6387d"></a>
 
 ### Ancestors
 
@@ -1158,12 +1038,12 @@ dev.setIrBacklightAndFanOff()
 <https://github.com/janelia-arduino/BacklightController>
 
 
-<a id="org9789570"></a>
+<a id="org0ce0204"></a>
 
 ### Clients
 
 
-<a id="org1b96a96"></a>
+<a id="orgfea62ff"></a>
 
 ### Devices
 
@@ -1174,31 +1054,31 @@ dev.setIrBacklightAndFanOff()
 <https://github.com/janelia-modular-devices/sleep_assay_controller>
 
 
-<a id="org0e5d6f4"></a>
+<a id="orge9d04e3"></a>
 
 ### More Detailed Modular Device Information
 
 <https://github.com/janelia-modular-devices/modular-devices>
 
 
-<a id="org38d34b3"></a>
+<a id="org60a50ab"></a>
 
 ### Installation Instructions
 
 <https://github.com/janelia-arduino/arduino-libraries>
 
 
-<a id="orgc75dbcc"></a>
+<a id="org1d7454d"></a>
 
 # Hardware
 
 
-<a id="org5e67c8e"></a>
+<a id="orgdbb5a18"></a>
 
 ## backlight\_controller\_3x2
 
 
-<a id="org00e12f0"></a>
+<a id="org7624043"></a>
 
 ### Repository Information
 
@@ -1214,12 +1094,12 @@ dev.setIrBacklightAndFanOff()
     This board controls one Smart Vision backlight with IR and visible channels plus additional high and low power channel outputs.
 
 
-<a id="orgae57cdb"></a>
+<a id="orgec5ac0f"></a>
 
 ### Images
 
 
-<a id="org7bc1d0f"></a>
+<a id="org207bfc7"></a>
 
 ### Schematic
 
@@ -1256,7 +1136,7 @@ dev.setIrBacklightAndFanOff()
 ![img](./images/backlight_controller_3x2/schematic/images/schematic14.png)
 
 
-<a id="orgcfdda6f"></a>
+<a id="orgbbe56a5"></a>
 
 ### Gerbers
 
@@ -1269,7 +1149,7 @@ Send gerbers zip file to your favorite PCB manufacturer for fabrication.
 ![img](./images/backlight_controller_3x2/gerbers/images/gerbers01.png)
 
 
-<a id="org73d7591"></a>
+<a id="org3b2c21e"></a>
 
 ### Bill of Materials
 
@@ -1307,7 +1187,7 @@ Send gerbers zip file to your favorite PCB manufacturer for fabrication.
     [./hardware/backlight\_controller\_3x2/bom/supplemental\_digikey\_parts.csv](./hardware/backlight_controller_3x2/bom/supplemental_digikey_parts.csv)
 
 
-<a id="orge3e23ab"></a>
+<a id="org18e6162"></a>
 
 ### Supplemental Documentation
 
@@ -1316,12 +1196,12 @@ Send gerbers zip file to your favorite PCB manufacturer for fabrication.
     -   Solder surface mount and through hole components onto the pcb.
 
 
-<a id="org7a9f970"></a>
+<a id="org7a08315"></a>
 
 ## sleep\_assay\_wiring
 
 
-<a id="org44b3fa7"></a>
+<a id="org98cb52d"></a>
 
 ### Repository Information
 
@@ -1335,12 +1215,12 @@ Send gerbers zip file to your favorite PCB manufacturer for fabrication.
 1.  Description
 
 
-<a id="orgf6684e0"></a>
+<a id="org731f564"></a>
 
 ### Images
 
 
-<a id="orga856cb6"></a>
+<a id="org2fd575c"></a>
 
 ### Schematic
 
@@ -1349,12 +1229,12 @@ Send gerbers zip file to your favorite PCB manufacturer for fabrication.
 ![img](./images/sleep_assay_wiring/schematic/images/schematic00.png)
 
 
-<a id="orga3b52b3"></a>
+<a id="org36ebc7c"></a>
 
 ### Gerbers
 
 
-<a id="orge26c5e5"></a>
+<a id="org19349f5"></a>
 
 ### Bill of Materials
 
@@ -1393,7 +1273,7 @@ Send gerbers zip file to your favorite PCB manufacturer for fabrication.
     [./hardware/sleep\_assay\_wiring/bom/supplemental\_digikey\_parts.csv](./hardware/sleep_assay_wiring/bom/supplemental_digikey_parts.csv)
 
 
-<a id="orga9f69ff"></a>
+<a id="orgf41aa80"></a>
 
 ### Supplemental Documentation
 
