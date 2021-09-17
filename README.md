@@ -61,7 +61,7 @@
 -   **License:** BSD, Open-Source Hardware
 -   **URL:** <https://github.com/janelia-modular-devices/sleep_assay_controller>
 -   **Author:** Peter Polidoro
--   **Email:** peterpolidoro@gmail.com
+-   **Email:** peter@polidoro.io
 
 
 <a id="org339af63"></a>
@@ -619,7 +619,7 @@ dev.setIrBacklightAndFanOff()
 -   **License:** BSD
 -   **URL:** <https://github.com/janelia-arduino/BacklightController>
 -   **Author:** Peter Polidoro
--   **Email:** peterpolidoro@gmail.com
+-   **Email:** peter@polidoro.io
 
 1.  Description
 
@@ -784,7 +784,7 @@ dev.setIrBacklightAndFanOff()
 -   **License:** BSD
 -   **URL:** <https://github.com/janelia-arduino/DigitalController>
 -   **Author:** Peter Polidoro
--   **Email:** peterpolidoro@gmail.com
+-   **Email:** peter@polidoro.io
 
 1.  Description
 
@@ -923,7 +923,7 @@ dev.setIrBacklightAndFanOff()
 -   **License:** BSD
 -   **URL:** <https://github.com/janelia-arduino/SleepAssayController>
 -   **Author:** Peter Polidoro
--   **Email:** peterpolidoro@gmail.com
+-   **Email:** peter@polidoro.io
 
 1.  Description
 
@@ -1087,7 +1087,7 @@ dev.setIrBacklightAndFanOff()
 -   **License:** Open-Source Hardware
 -   **URL:** <https://github.com/janelia-kicad/backlight_controller_3x2>
 -   **Author:** Peter Polidoro
--   **Email:** peterpolidoro@gmail.com
+-   **Email:** peter@polidoro.io
 
 1.  Description
 
@@ -1210,7 +1210,7 @@ Send gerbers zip file to your favorite PCB manufacturer for fabrication.
 -   **License:** Open-Source Hardware
 -   **URL:** <https://github.com/janelia-kicad/sleep_assay_wiring>
 -   **Author:** Peter Polidoro
--   **Email:** peterpolidoro@gmail.com
+-   **Email:** peter@polidoro.io
 
 1.  Description
 
