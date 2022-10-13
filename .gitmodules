@@ -13,3 +13,6 @@
 [submodule "firmware/DigitalController"]
 	path = firmware/DigitalController
 	url = https://github.com/janelia-arduino/DigitalController.git
+[submodule "hardware/backlight_controller_6x3"]
+	path = hardware/backlight_controller_6x3
+	url = https://github.com/janelia-kicad/backlight_controller_6x3
