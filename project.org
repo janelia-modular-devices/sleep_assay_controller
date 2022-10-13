@@ -1,7 +1,7 @@
 * Header                                                           :noexport:
 
   #+MACRO: name sleep_assay_controller
-  #+MACRO: version 2.0
+  #+MACRO: version 2.1
   #+MACRO: license BSD, Open-Source Hardware
   #+MACRO: url https://github.com/janelia-modular-devices/sleep_assay_controller
   #+AUTHOR: Peter Polidoro
@@ -26,7 +26,7 @@
      #   "result": {
      #     "device_id": {
      #       "name": "sleep_assay_controller",
-     #       "form_factor": "3x2",
+     #       "form_factor": "6x3",
      #       "serial_number": 0
      #     },
      #     "api": {
