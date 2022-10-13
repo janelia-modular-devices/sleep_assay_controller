@@ -1,9 +1,6 @@
 [submodule "firmware/SleepAssayController"]
 	path = firmware/SleepAssayController
 	url = https://github.com/janelia-arduino/SleepAssayController.git
-[submodule "hardware/backlight_controller_3x2"]
-	path = hardware/backlight_controller_3x2
-	url = https://github.com/janelia-kicad/backlight_controller_3x2.git
 [submodule "generate_modular_device_documentation"]
 	path = generate_modular_device_documentation
 	url = https://github.com/janelia-modular-devices/generate_modular_device_documentation.git
