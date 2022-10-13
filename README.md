@@ -1,59 +1,59 @@
-- [Repository Information](#orgffdaa40)
-  - [Description](#orgba36317)
-- [Images](#org7532679)
-- [Usage Instructions](#orgb5d6167)
-  - [Arduino Serial Monitor](#org3521713)
-  - [Matlab](#orgb94a984)
-- [Build Instructions](#orgc3f6ac3)
-- [Software](#orgfd16adc)
-- [Firmware](#org683c8ab)
-  - [BacklightController](#org3c10d76)
-    - [Library Information](#orgdc1e86d)
-    - [API NAMES](#org5349c83)
-    - [API GENERAL](#org1d2b913)
-    - [Ancestors](#org639a81a)
-    - [Clients](#orgd94bd4f)
-    - [Devices](#org74ace56)
-    - [More Detailed Modular Device Information](#org5e5479c)
-    - [Installation Instructions](#orga133675)
-  - [DigitalController](#orgfdae26b)
-    - [Library Information](#orgc236c51)
-    - [API NAMES](#orgd4ee98b)
-    - [API GENERAL](#orge20931f)
-    - [Ancestors](#org06ba571)
-    - [Clients](#orgde97d57)
-    - [Devices](#org31a51fd)
-    - [More Detailed Modular Device Information](#org32d5e86)
-    - [Installation Instructions](#orgea44f6d)
-  - [SleepAssayController](#org173504e)
-    - [Library Information](#org8d28a6c)
-    - [API NAMES](#org4cc53ff)
-    - [API GENERAL](#org9c14ae5)
-    - [Ancestors](#orgb8d26f4)
-    - [Clients](#org1d59f29)
-    - [Devices](#orga6a2c9a)
-    - [More Detailed Modular Device Information](#orgaa16f72)
-    - [Installation Instructions](#orge037e37)
-- [Hardware](#org335801b)
-  - [backlight\_controller\_6x3](#org8a7c97f)
-    - [Repository Information](#org39f396c)
-    - [Images](#orgdedf167)
-    - [Schematic](#org282789e)
-    - [Gerbers](#orgb417311)
-    - [Bill of Materials](#orge7e5628)
-    - [Supplemental Documentation](#org787695c)
-    - [Manufacturing Archive](#org98d1254)
-  - [sleep\_assay\_wiring](#orga85bd4b)
-    - [Repository Information](#orgdcfbb07)
-    - [Images](#orgbafcf3e)
-    - [Schematic](#orgfbde608)
-    - [Gerbers](#orgd61ae9b)
-    - [Bill of Materials](#orgd5fc426)
-    - [Supplemental Documentation](#org25138e2)
+- [Repository Information](#orgedb553d)
+  - [Description](#org069ed61)
+- [Images](#org288bfa4)
+- [Usage Instructions](#orgad9aa76)
+  - [Arduino Serial Monitor](#org8f5cc01)
+  - [Matlab](#org1de06f1)
+- [Build Instructions](#org34bcea6)
+- [Software](#org9f43ca5)
+- [Firmware](#orge8a66be)
+  - [BacklightController](#org0e6538b)
+    - [Library Information](#org8a35091)
+    - [API NAMES](#org36927b9)
+    - [API GENERAL](#org73fd354)
+    - [Ancestors](#org32d5d2b)
+    - [Clients](#orgd2e32c3)
+    - [Devices](#org285de8b)
+    - [More Detailed Modular Device Information](#org692c112)
+    - [Installation Instructions](#orgb627733)
+  - [DigitalController](#org15ede0c)
+    - [Library Information](#orgdfa2c60)
+    - [API NAMES](#orge2899cb)
+    - [API GENERAL](#org3c9337e)
+    - [Ancestors](#org9e8182c)
+    - [Clients](#org413781a)
+    - [Devices](#org1263bbe)
+    - [More Detailed Modular Device Information](#orgd0547e5)
+    - [Installation Instructions](#org2b6cb26)
+  - [SleepAssayController](#org61bd8a4)
+    - [Library Information](#org0ca160e)
+    - [API NAMES](#org7983a09)
+    - [API GENERAL](#org451a925)
+    - [Ancestors](#orgb90a8d4)
+    - [Clients](#org9c06356)
+    - [Devices](#org11a4c66)
+    - [More Detailed Modular Device Information](#org90f3b96)
+    - [Installation Instructions](#orge348d53)
+- [Hardware](#orgbeef1f2)
+  - [backlight\_controller\_6x3](#orga492eb3)
+    - [Repository Information](#orgd180719)
+    - [Images](#org6802776)
+    - [Schematic](#org441324f)
+    - [Gerbers](#org1916235)
+    - [Bill of Materials](#org530c0a7)
+    - [Supplemental Documentation](#orgd881ff8)
+    - [Manufacturing Archive](#org400eb14)
+  - [sleep\_assay\_wiring](#org6b32e29)
+    - [Repository Information](#org00bb4d7)
+    - [Images](#orgb10afe8)
+    - [Schematic](#org546641e)
+    - [Gerbers](#org3a72d54)
+    - [Bill of Materials](#orgecb5a0e)
+    - [Supplemental Documentation](#org97c26e0)
 
 
 
-<a id="orgffdaa40"></a>
+<a id="orgedb553d"></a>
 
 # Repository Information
 
@@ -65,24 +65,24 @@
 -   **Email:** peter@polidoro.io
 
 
-<a id="orgba36317"></a>
+<a id="org069ed61"></a>
 
 ## Description
 
 This device controls the IR and visible backlights in the sleep assay rig along with the backlight cooling fans, white lights, buzzers and indicator lights.
 
 
-<a id="org7532679"></a>
+<a id="org288bfa4"></a>
 
 # Images
 
 
-<a id="orgb5d6167"></a>
+<a id="orgad9aa76"></a>
 
 # Usage Instructions
 
 
-<a id="org3521713"></a>
+<a id="org8f5cc01"></a>
 
 ## Arduino Serial Monitor
 
@@ -463,7 +463,7 @@ This device controls the IR and visible backlights in the sleep assay rig along 
 ```
 
 
-<a id="orgb94a984"></a>
+<a id="org1de06f1"></a>
 
 ## Matlab
 
@@ -591,44 +591,44 @@ This device controls the IR and visible backlights in the sleep assay rig along 
 ```
 
 
-<a id="orgc3f6ac3"></a>
+<a id="org34bcea6"></a>
 
 # Build Instructions
 
 
-<a id="orgfd16adc"></a>
+<a id="org9f43ca5"></a>
 
 # Software
 
 
-<a id="org683c8ab"></a>
+<a id="orge8a66be"></a>
 
 # Firmware
 
 
-<a id="org3c10d76"></a>
+<a id="org0e6538b"></a>
 
 ## BacklightController
 
 
 
-<a id="orgdc1e86d"></a>
+<a id="org8a35091"></a>
 
 ### Library Information
 
 -   **Name:** BacklightController
--   **Version:** 4.0.2
+-   **Version:** 5.1.0
 -   **License:** BSD
 -   **URL:** <https://github.com/janelia-arduino/BacklightController>
 -   **Author:** Peter Polidoro
--   **Email:** peterpolidoro@gmail.com
+-   **Email:** peter@polidoro.io
 
 1.  Description
 
     Modular device backlight controller library.
 
 
-<a id="org5349c83"></a>
+<a id="org36927b9"></a>
 
 ### API NAMES
 
@@ -719,21 +719,22 @@ This device controls the IR and visible backlights in the sleep assay rig along 
           "toggleAllHighVoltages",
           "setAllLowVoltagesOn",
           "setAllLowVoltagesOff",
-          "toggleAllLowVoltages"
+          "toggleAllLowVoltages",
+          "toggleEnableAll"
         ]
       }
     }
 ```
 
 
-<a id="org1d2b913"></a>
+<a id="org73fd354"></a>
 
 ### API GENERAL
 
 <./firmware/BacklightController/api/>
 
 
-<a id="org639a81a"></a>
+<a id="org32d5d2b"></a>
 
 ### Ancestors
 
@@ -744,12 +745,12 @@ This device controls the IR and visible backlights in the sleep assay rig along 
 <https://github.com/janelia-arduino/DigitalController>
 
 
-<a id="orgd94bd4f"></a>
+<a id="orgd2e32c3"></a>
 
 ### Clients
 
 
-<a id="org74ace56"></a>
+<a id="org285de8b"></a>
 
 ### Devices
 
@@ -758,43 +759,43 @@ This device controls the IR and visible backlights in the sleep assay rig along 
 <https://github.com/janelia-modular-devices/backlight_controller>
 
 
-<a id="org5e5479c"></a>
+<a id="org692c112"></a>
 
 ### More Detailed Modular Device Information
 
 <https://github.com/janelia-modular-devices/modular-devices>
 
 
-<a id="orga133675"></a>
+<a id="orgb627733"></a>
 
 ### Installation Instructions
 
 <https://github.com/janelia-arduino/arduino-libraries>
 
 
-<a id="orgfdae26b"></a>
+<a id="org15ede0c"></a>
 
 ## DigitalController
 
 
 
-<a id="orgc236c51"></a>
+<a id="orgdfa2c60"></a>
 
 ### Library Information
 
 -   **Name:** DigitalController
--   **Version:** 2.2.1
+-   **Version:** 3.2.0
 -   **License:** BSD
 -   **URL:** <https://github.com/janelia-arduino/DigitalController>
 -   **Author:** Peter Polidoro
--   **Email:** peterpolidoro@gmail.com
+-   **Email:** peter@polidoro.io
 
 1.  Description
 
     Modular device digital output controller library.
 
 
-<a id="orgd4ee98b"></a>
+<a id="orge2899cb"></a>
 
 ### API NAMES
 
@@ -870,14 +871,14 @@ This device controls the IR and visible backlights in the sleep assay rig along 
 ```
 
 
-<a id="orge20931f"></a>
+<a id="org3c9337e"></a>
 
 ### API GENERAL
 
 <./firmware/DigitalController/api/>
 
 
-<a id="org06ba571"></a>
+<a id="org9e8182c"></a>
 
 ### Ancestors
 
@@ -886,55 +887,55 @@ This device controls the IR and visible backlights in the sleep assay rig along 
 <https://github.com/janelia-arduino/ModularDeviceBase>
 
 
-<a id="orgde97d57"></a>
+<a id="org413781a"></a>
 
 ### Clients
 
 
-<a id="org31a51fd"></a>
+<a id="org1263bbe"></a>
 
 ### Devices
 
 <https://github.com/janelia-modular-devices/modular_device_base>
 
 
-<a id="org32d5e86"></a>
+<a id="orgd0547e5"></a>
 
 ### More Detailed Modular Device Information
 
 <https://github.com/janelia-modular-devices/modular-devices>
 
 
-<a id="orgea44f6d"></a>
+<a id="org2b6cb26"></a>
 
 ### Installation Instructions
 
 <https://github.com/janelia-arduino/arduino-libraries>
 
 
-<a id="org173504e"></a>
+<a id="org61bd8a4"></a>
 
 ## SleepAssayController
 
 
 
-<a id="org8d28a6c"></a>
+<a id="org0ca160e"></a>
 
 ### Library Information
 
 -   **Name:** SleepAssayController
--   **Version:** 2.0.0
+-   **Version:** 2.0.8
 -   **License:** BSD
 -   **URL:** <https://github.com/janelia-arduino/SleepAssayController>
 -   **Author:** Peter Polidoro
--   **Email:** peterpolidoro@gmail.com
+-   **Email:** peter@polidoro.io
 
 1.  Description
 
     Modular device sleep assay controller library.
 
 
-<a id="org4cc53ff"></a>
+<a id="org7983a09"></a>
 
 ### API NAMES
 
@@ -1022,14 +1023,14 @@ This device controls the IR and visible backlights in the sleep assay rig along 
 ```
 
 
-<a id="org9c14ae5"></a>
+<a id="org451a925"></a>
 
 ### API GENERAL
 
 <./firmware/SleepAssayController/api/>
 
 
-<a id="orgb8d26f4"></a>
+<a id="orgb90a8d4"></a>
 
 ### Ancestors
 
@@ -1042,12 +1043,12 @@ This device controls the IR and visible backlights in the sleep assay rig along 
 <https://github.com/janelia-arduino/BacklightController>
 
 
-<a id="org1d59f29"></a>
+<a id="org9c06356"></a>
 
 ### Clients
 
 
-<a id="orga6a2c9a"></a>
+<a id="org11a4c66"></a>
 
 ### Devices
 
@@ -1058,32 +1059,32 @@ This device controls the IR and visible backlights in the sleep assay rig along 
 <https://github.com/janelia-modular-devices/sleep_assay_controller>
 
 
-<a id="orgaa16f72"></a>
+<a id="org90f3b96"></a>
 
 ### More Detailed Modular Device Information
 
 <https://github.com/janelia-modular-devices/modular-devices>
 
 
-<a id="orge037e37"></a>
+<a id="orge348d53"></a>
 
 ### Installation Instructions
 
 <https://github.com/janelia-arduino/arduino-libraries>
 
 
-<a id="org335801b"></a>
+<a id="orgbeef1f2"></a>
 
 # Hardware
 
 
-<a id="org8a7c97f"></a>
+<a id="orga492eb3"></a>
 
 ## backlight\_controller\_6x3
 
 
 
-<a id="org39f396c"></a>
+<a id="orgd180719"></a>
 
 ### Repository Information
 
@@ -1099,12 +1100,12 @@ This device controls the IR and visible backlights in the sleep assay rig along 
     This board controls up to four Smart Vision backlights with IR and visible channels plus additional high and low power channel outputs.
 
 
-<a id="orgdedf167"></a>
+<a id="org6802776"></a>
 
 ### Images
 
 
-<a id="org282789e"></a>
+<a id="org441324f"></a>
 
 ### Schematic
 
@@ -1155,7 +1156,7 @@ This device controls the IR and visible backlights in the sleep assay rig along 
 ![img](./images/backlight_controller_6x3/schematic/images/schematic21.png)
 
 
-<a id="orgb417311"></a>
+<a id="org1916235"></a>
 
 ### Gerbers
 
@@ -1164,7 +1165,7 @@ This device controls the IR and visible backlights in the sleep assay rig along 
 ![img](./images/backlight_controller_6x3/gerbers/images/gerbers01.png)
 
 
-<a id="orge7e5628"></a>
+<a id="org530c0a7"></a>
 
 ### Bill of Materials
 
@@ -1205,7 +1206,7 @@ This device controls the IR and visible backlights in the sleep assay rig along 
     [./hardware/backlight\_controller\_6x3/bom/supplemental\_Digi-Key\_parts.csv](./hardware/backlight_controller_6x3/bom/supplemental_Digi-Key_parts.csv)
 
 
-<a id="org787695c"></a>
+<a id="orgd881ff8"></a>
 
 ### Supplemental Documentation
 
@@ -1214,7 +1215,7 @@ This device controls the IR and visible backlights in the sleep assay rig along 
     -   Solder surface mount and through hole components onto the pcb.
 
 
-<a id="org98d1254"></a>
+<a id="org400eb14"></a>
 
 ### Manufacturing Archive
 
@@ -1223,13 +1224,13 @@ Send manufacturing zip file to your favorite PCB manufacturer for fabrication.
 [./hardware/backlight\_controller\_6x3/manufacturing/backlight\_controller\_6x3\_v1.0.zip](./hardware/backlight_controller_6x3/manufacturing/backlight_controller_6x3_v1.0.zip)
 
 
-<a id="orga85bd4b"></a>
+<a id="org6b32e29"></a>
 
 ## sleep\_assay\_wiring
 
 
 
-<a id="orgdcfbb07"></a>
+<a id="org00bb4d7"></a>
 
 ### Repository Information
 
@@ -1238,17 +1239,17 @@ Send manufacturing zip file to your favorite PCB manufacturer for fabrication.
 -   **License:** Open-Source Hardware
 -   **URL:** <https://github.com/janelia-kicad/sleep_assay_wiring>
 -   **Author:** Peter Polidoro
--   **Email:** peterpolidoro@gmail.com
+-   **Email:** peter@polidoro.io
 
 1.  Description
 
 
-<a id="orgbafcf3e"></a>
+<a id="orgb10afe8"></a>
 
 ### Images
 
 
-<a id="orgfbde608"></a>
+<a id="org546641e"></a>
 
 ### Schematic
 
@@ -1257,12 +1258,12 @@ Send manufacturing zip file to your favorite PCB manufacturer for fabrication.
 ![img](./images/sleep_assay_wiring/schematic/images/schematic00.png)
 
 
-<a id="orgd61ae9b"></a>
+<a id="org3a72d54"></a>
 
 ### Gerbers
 
 
-<a id="orgd5fc426"></a>
+<a id="orgecb5a0e"></a>
 
 ### Bill of Materials
 
@@ -1301,7 +1302,7 @@ Send manufacturing zip file to your favorite PCB manufacturer for fabrication.
     [./hardware/sleep\_assay\_wiring/bom/supplemental\_digikey\_parts.csv](./hardware/sleep_assay_wiring/bom/supplemental_digikey_parts.csv)
 
 
-<a id="org25138e2"></a>
+<a id="org97c26e0"></a>
 
 ### Supplemental Documentation
 
